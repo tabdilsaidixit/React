@@ -1,12 +1,29 @@
 import React from 'react';
 import './App.css';
+import UserInput from './UserInput/UserInput';
+import UserOutput from './UserOutput/UserOutput';
+class App extends React.Component {
+  state = {
+    userName:"Sai Dixit"
+  }
 
-function App() {
-  return (
-    <div className="App">
-      <h1> Hello !!</h1>
-    </div>
-  );
+  userNameChangeHandler = (event) =>{
+    //console.log(event.target.value);
+    this.setState({userName: event.target.value});
+  }
+
+
+  render(){
+      
+    return (
+      <div className="App">
+        <h1> Hello !!</h1>
+        <UserInput userNameChangeHandler={this.userNameChangeHandler} userName={this.state.userName}/>
+        <UserOutput userName={this.state.userName}/>
+      </div>
+    );
+
+  }
 }
 
 export default App;
