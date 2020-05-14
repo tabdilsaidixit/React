@@ -1,7 +1,11 @@
 .UserInput{
     background-color: beige;
-    border: black;
-    margin: 12px auto;
-    width:  60% auto;
+    border: 2px solid black;
+    margin: 12px;
+    width:  60% ;
+    text-align: center;
+    padding: 12px;
+    
+
 }
 
